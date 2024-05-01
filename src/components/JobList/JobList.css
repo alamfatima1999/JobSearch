@@ -1,0 +1,52 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust height as needed */
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* JobList.css */
+
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Display three cards per row by default */
+    gap: 20px;
+    /* Add some space between cards */
+}
+
+@media screen and (max-width: 768px) {
+    .job-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        /* Adjust for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .job-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /* Adjust for even smaller screens */
+    }
+}
