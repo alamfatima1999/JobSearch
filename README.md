@@ -21,8 +21,9 @@ NOTE: We are using Material-UI in this project may be possible it will give you 
 Currently Using: 
 Node Version - 21+
 NPM Version - 10+
-try command  ``` npm install --legacy-peer-deps```
-to install all package of material-ui with legacy dependency
+
+Try command  ``` npm install --legacy-peer-deps```
+to install all package of material-ui packages with legacy dependency
 
 3) Once all packages are installed. run local server
 ```npm run start```
