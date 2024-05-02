@@ -45,7 +45,8 @@ Installation's Required:
 2) Install all required packages & lib using command 
 ``` npm install```
 
-NOTE: We are using Material-UI in this project may be possible it will give you comptabililty issue based on you NPM & React Version
+NOTE: We are using Material-UI in this project may be possible it will give you comptabililty issue based on you NPM & React Version.
+Currently Using: 
 Node Version - 21+
 NPM Version - 10+
 try command  ``` npm install --legacy-peer-deps```
