@@ -14,6 +14,7 @@ const Label = styled('div')({
 });
 
 const ChipStyled = styled(Chip)({
+    // update CSS
     margin: 5, 
     borderRadius: 0,
 });
