@@ -42,8 +42,25 @@ Installation's Required:
 1) Clone git repo: 
 ```git clone https://github.com/alamfatima1999/JobSearch.git```
 
+2) Install all required packages & lib using command 
+``` npm install```
+
+NOTE: We are using Material-UI in this project may be possible it will give you comptabililty issue based on you NPM & React Version
+Node Version - 21+
+NPM Version - 10+
+try command  ``` npm install --legacy-peer-deps```
+to install all package of material-ui with legacy dependency
+
+3) Once all packages are installed. run local server
+```npm run start```
+
+4) your local server will start on 
+    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
+## ScreenShot From Project
+
+## Code deployed on Netlify
 
 
 
