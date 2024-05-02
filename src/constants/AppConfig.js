@@ -1,5 +1,6 @@
 // constants.js
 
+export const BASE_URL = "https://api.weekday.technology/adhoc/getSampleJdJSON"
 export const roles = [
     {
         key: "Tech Lead",
@@ -86,25 +87,45 @@ export const techStack = [
 
 export const minBasePay = [
     {
-        key: "10L",
+        key: "10$",
         value: "10"
     },
     {
-        key: "20L",
+        key: "20$",
         value: "20"
     },
     {
-        key: "30L",
+        key: "30$",
         value: "30"
     },
     {
-        key: "40L",
+        key: "40$",
         value: "40"
     },
     {
-        key: "50L",
+        key: "50$",
         value: "50"
-    },  
+    },
+    {
+        key: "60$",
+        value: "60"
+    },
+    {
+        key: "70$",
+        value: "70"
+    },
+    {
+        key: "80$",
+        value: "80"
+    },
+    {
+        key: "90$",
+        value: "90"
+    },
+    {
+        key: "100$",
+        value: "100"
+    },
 ];
 
 export const expLevel = [
@@ -127,5 +148,37 @@ export const expLevel = [
     {
         key: "5",
         value: "5"
+    },
+    {
+        key: "6",
+        value: "6"
+    }, 
+    {
+        key: "7",
+        value: "7"
+    }, 
+    {
+        key: "8",
+        value: "8"
+    }, 
+    {
+        key: "9",
+        value: "9"
+    },
+    {
+        key: "10",
+        value: "10"
+    }, 
+    {
+        key: "11",
+        value: "11"
+    },
+    {
+        key: "12",
+        value: "12"
+    }, 
+    {
+        key: "13",
+        value: "13"
     },
 ];

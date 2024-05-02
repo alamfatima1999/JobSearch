@@ -1,8 +1,4 @@
-// JobCard.js
-
 import React, { useState } from 'react';
-// import { makeStyles } from '@mui/material/styles';
-import { withStyles } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -11,102 +7,93 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
+import { styled as muiStyled } from '@mui/system';
 
-const useStyles = withStyles((theme) => ({
+const styles = {
     jobCard: {
-        padding: theme.spacing(2),
-        marginBottom: theme.spacing(2),
+        padding: 2,
+        marginBottom: 2,
         position: 'relative',
-        borderRadius: theme.spacing(1),
+        borderRadius: 5,
+        transition: 'transform 0.3s', 
+        '&:hover': {
+            transform: 'scale(1.05)',
+        },
     },
     badge: {
         position: 'absolute',
-        top: theme.spacing(1),
-        left: theme.spacing(1),
+        top: 1,
+        left: 1,
         backgroundColor: '#FFFFFF',
         color: '#000000',
-        padding: theme.spacing(0.5, 1),
-        borderRadius: theme.spacing(1),
+        padding: '4px 8px',
+        borderRadius: 20,
         border: '1px solid #000000',
+        margin: '12px 0px 0px 12px'
     },
     header: {
         textAlign: 'left',
         display: 'flex',
         alignItems: 'center',
-        marginBottom: theme.spacing(1),
+        marginBottom: 1,
         paddingTop: '40px',
     },
     logo: {
-        width: theme.spacing(7),
-        height: theme.spacing(7),
-        marginRight: theme.spacing(2),
+        width: 56,
+        height: 56,
+        marginRight: 2,
         borderRadius: '50%',
     },
     companyInfo: {
+        textAlign: 'left',
+        paddingLeft: 10,
         '& > *': {
-            textAlign: 'left',
-            margin: theme.spacing(0.5, 0),
+            margin: '0.5rem 0',
             fontWeight: 'bold',
             color: '#000000',
         },
     },
-    companyName: { // Style for Company Name
-        fontSize: '13px',
-        fontWeight: 600,
-        letterSpacing: '1px',
-        marginBottom: '3px',
-        color: '#8b8b8b',
-    },
-    jobRole: { // Style for jobRole
-        fontSize: '14px',
-        lineHeight: 1.5,
-    },
-    location: { // Style for Location
-        fontSize: '14px',
-        fontWeight: 500,
-    },
-    salary: {
-        textAlign: 'left',
-        margin: theme.spacing(1, 0),
-        fontWeight: 400,
-        color: '#000000',
-    },
-    jobDesc: {
-        textAlign: 'left',
-        margin: theme.spacing(1, 0),
-        fontWeight: 400,
-        color: '#000000',
-    },
     aboutUs: {
-        textAlign: 'left',
         fontSize: '1rem',
         lineHeight: 1.5,
         fontWeight: 'bold',
         color: '#000000',
     },
     aboutCompany: {
-        textAlign: 'left',
         fontSize: '1rem',
         lineHeight: 1.5,
         fontWeight: 600,
         color: '#000000',
     },
+    salary: {
+        textAlign: 'left',
+        margin: '8px 0',
+        fontWeight: 400,
+        color: '#000000',
+    },
+    jobDesc: {
+        textAlign: 'left',
+        margin: '8px 0',
+        fontWeight: 400,
+        color: '#000000',
+    },
     experience: {
         textAlign: 'left',
-        margin: theme.spacing(1, 0),
+        margin: '8px 0',
         fontWeight: 'bold',
         color: '#000000',
     },
-    applyButton: {
-        textAlign: 'center',
-        marginTop: theme.spacing(2),
-        backgroundColor: '#55EFC4',
-        color: '#000000',
+};
+
+const ColorButton = muiStyled(Button)({
+    color: '#000000',
+    backgroundColor: 'rgb(85, 239, 196)',
+    '&:hover': {
+        backgroundColor: 'rgb(56, 186, 157)',
     },
-}));
+});
 
 const JobCard = ({ job }) => {
-    const classes = useStyles();
     const [openDialog, setOpenDialog] = useState(false);
 
     const handleViewJob = () => {
@@ -116,55 +103,58 @@ const JobCard = ({ job }) => {
     const handleCloseDialog = () => {
         setOpenDialog(false);
     };
+    const getCurrencySymbol = (currencyCode) => {
+        switch (currencyCode.toUpperCase()) {
+            case 'USD':
+                return ' $ ';
+            case 'INR':
+                return ' ₹ ';
+            default:
+                return currencyCode; // Return code itself if symbol is not found
+        }
+    };
 
     return (
-        <Paper elevation={3} className={classes.jobCard}>
-            <div className={classes.badge}><span role="img" aria-label="time icon">⏰</span> Posted 10 days ago</div>
-            <div className={classes.header}>
-                <img src={"https://dummyimage.com/300"} alt={job.company} className={classes.logo} />
-                <div className={classes.companyInfo}>
-                    <Typography variant="h6" className={classes.companyName}>{"Company Name"}</Typography>
-                    <Typography variant="subtitle1" className={classes.jobRole}>{job.jobRole}</Typography>
-                    <Typography variant="body2" className={classes.location}>{job.location}</Typography>
+        <div>
+            <Paper elevation={3} sx={styles.jobCard}>
+                <div style={styles.badge}><span role="img" aria-label="time icon">⏰</span> Posted 10 days ago</div>
+                <div style={styles.header}>
+                    {/* { Dummy Image consider as placeholder for company Logo} */}
+                    <img src={"https://dummyimage.com/300"} alt={job.company} style={styles.logo} />
+                    <div style={styles.companyInfo}>
+                        <Typography variant="h6" sx={{ fontSize: '13px', fontWeight: 800, letterSpacing: '1px', marginBottom: '3px', color: '#8b8b8b' }}>{"Company Name"}</Typography>
+                        <Typography variant="subtitle1" sx={{ fontSize: '14px', lineHeight: 1.5 }}>{job.jobRole}</Typography>
+                        <Typography variant="body2" sx={{ fontSize: '14px', fontWeight: 800 }}>{job.location}</Typography>
+                    </div>
                 </div>
-            </div>
-            <Typography variant="body2" className={classes.salary}>
-                Estimated Salary Range: {job.salary || "10 - 20 LPA"} ✅
-            </Typography>
-            <Typography variant="body2" className={classes.jobDesc}>
-                <span className={classes.aboutCompany}> About Company:</span>
-                <br />
-                <span className={classes.aboutUs}> About Us:</span>
-                <br />
-                <span className={classes.jobDesc}>{job.jobDetailsFromCompany.substring(0, 150)}...</span>
-
+                <Typography variant="body2" sx={styles.salary}>
+                    Estimated Salary Range: {job.minJdSalary ? job.minJdSalary + " - " + job.maxJdSalary : "-"}{getCurrencySymbol(job.salaryCurrencyCode)}✅
+                </Typography>
+                <Typography variant="body2" sx={styles.jobDesc}>
+                    <div style={styles.aboutCompany}> About Company:</div>
+                    <div style={styles.aboutUs}> About Us:</div>
+                    <div style={styles.jobDesc}>{job.jobDetailsFromCompany.substring(0, 150)}...</div> 
+                </Typography>
                 <Button color="primary" onClick={handleViewJob}>View Job</Button>
-            </Typography>
-            <Typography variant="body2" className={classes.experience}>
-                Minimum Experience
-                <div>{"5+ years"}</div>
-            </Typography>
-            <Button
-                variant="contained"
-                color="primary"
-                className={classes.applyButton}
-                startIcon={<FlashOnIcon />} // Adding the lightning icon as the start icon
-            >
-                Easy Apply
-            </Button>
+                <Typography variant="body2" sx={styles.experience}>
+                    Minimum Experience
+                    <div>{job.minExp || "-"}{" years"}</div>
+                </Typography>
+                <ColorButton variant="contained" startIcon={<FlashOnIcon />}>Easy Apply</ColorButton>
 
-            <Dialog open={openDialog} onClose={handleCloseDialog}>
-                <DialogTitle>Job Details</DialogTitle>
-                <DialogContent>
-                    <Typography>{job.jobDetailsFromCompany}</Typography>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleCloseDialog} color="primary">
-                        Close
-                    </Button>
-                </DialogActions>
-            </Dialog>
-        </Paper>
+                <Dialog open={openDialog} onClose={handleCloseDialog}>
+                    <DialogTitle>Job Details</DialogTitle>
+                    <DialogContent>
+                        <Typography>{job.jobDetailsFromCompany}</Typography>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCloseDialog} color="primary">
+                            Close
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            </Paper>
+        </div>
     );
 };
 

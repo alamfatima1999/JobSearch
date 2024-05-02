@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# JOB Search Page created using React CRA
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,15 +29,64 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Setup
+Installation's Required:
+- Node.js
+- CRA
+- GIT
+- VsCode
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# To run code on local follow below steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1) Clone git repo: 
+```git clone https://github.com/alamfatima1999/JobSearch.git```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2) Install all required packages & lib using command 
+``` npm install```
+
+NOTE: We are using Material-UI in this project may be possible it will give you comptabililty issue based on you NPM & React Version.
+Currently Using: 
+Node Version - 21+
+NPM Version - 10+
+try command  ``` npm install --legacy-peer-deps```
+to install all package of material-ui with legacy dependency
+
+3) Once all packages are installed. run local server
+```npm run start```
+
+4) your local server will start on 
+    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+## ScreenShot From Project
+
+- Application Search Page with job List
+  
+<img width="1352" alt="Screenshot 2024-05-02 at 12 45 58 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/80c03883-a31f-4c0b-aaca-7b623f45a7ff">
+
+- Application Filter component
+  
+<img width="1277" alt="Screenshot 2024-05-02 at 12 46 09 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/8a2fae84-b8b8-42d4-b365-509679594a15">
+
+- Different filter Options
+  
+<img width="188" alt="Screenshot 2024-05-02 at 12 46 15 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/06a5be38-4ebe-4d95-bdfc-07575088418a">
+<img width="178" alt="Screenshot 2024-05-02 at 12 46 21 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/dc8ef9f8-ce8b-40e9-a4d1-e1753535f861">
+<img width="184" alt="Screenshot 2024-05-02 at 12 46 28 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/3f6554b3-adad-483d-af42-ff5e67093fd8">
+
+
+- JOB Card with all basic details
+  
+<img width="465" alt="Screenshot 2024-05-02 at 12 46 44 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/21262630-7066-428a-b044-3eedab75ab34">
+
+
+## Code deployed on Netlify
+
+
+
+
+
 
 ## Learn More
 
