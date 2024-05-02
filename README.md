@@ -60,6 +60,14 @@ to install all package of material-ui with legacy dependency
 
 
 ## ScreenShot From Project
+<img width="1352" alt="Screenshot 2024-05-02 at 12 45 49 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/087f953d-eb2e-4562-8bf1-66e6d37aa3f4">
+<img width="1352" alt="Screenshot 2024-05-02 at 12 45 58 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/80c03883-a31f-4c0b-aaca-7b623f45a7ff">
+<img width="1277" alt="Screenshot 2024-05-02 at 12 46 09 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/8a2fae84-b8b8-42d4-b365-509679594a15">
+<img width="188" alt="Screenshot 2024-05-02 at 12 46 15 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/06a5be38-4ebe-4d95-bdfc-07575088418a">
+<img width="178" alt="Screenshot 2024-05-02 at 12 46 21 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/dc8ef9f8-ce8b-40e9-a4d1-e1753535f861">
+<img width="184" alt="Screenshot 2024-05-02 at 12 46 28 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/3f6554b3-adad-483d-af42-ff5e67093fd8">
+<img width="465" alt="Screenshot 2024-05-02 at 12 46 44 PM" src="https://github.com/alamfatima1999/JobSearch/assets/71816449/21262630-7066-428a-b044-3eedab75ab34">
+
 
 ## Code deployed on Netlify
 
